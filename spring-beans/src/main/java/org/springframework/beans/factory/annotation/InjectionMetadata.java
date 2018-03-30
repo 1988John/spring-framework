@@ -166,7 +166,7 @@ public class InjectionMetadata {
 			if (this.isField) {
 				Field field = (Field) this.member;
 				ReflectionUtils.makeAccessible(field);
-				field.set(target, getResourceToInject(target, requestingBeanName));
+				field.set(target, getResourceToInject(target, requestingBeanName));//java反射，设置对象属性
 			}
 			else {
 				if (checkPropertySkipping(pvs)) {
