@@ -552,6 +552,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 		try {
 			populateBean(beanName, mbd, instanceWrapper);
 			if (exposedObject != null) {
+				//此处初始化  【类/接口-->代理】的转换过程
 				exposedObject = initializeBean(beanName, exposedObject, mbd);
 			}
 		}
